@@ -1,8 +1,12 @@
 # 双色球历史统计工具（桌面版 + 安卓版）
 
+<p align="center"><b><font size="5">🎱 理性购彩 · 量力而行 · 未成年人禁止购彩</font></b></p>
+
+<p align="center"><b>🤖 AI 协作开发：豆包（Doubao） · ⚠️ 非官方项目，详见下方声明</b></p>
+
 > **⚠️ 非官方声明**：本项目为个人开发者发布的独立开源项目，**并非中国福利彩票发行管理中心的官方产品**，与福彩中心、彩票销售机构**均无任何隶属或授权关系**；项目署名中的「豆包（Doubao）」仅为 AI 协作开发署名，**不代表字节跳动/豆包官方出品或背书**。请勿将本项目误认为任何官方应用。
 
-一套完全本地运行的双色球历史数据统计、选号参考与回测验证工具。包含 Windows 桌面版（Python + PySide6）与 Android 版（Java + Chaquopy 内嵌 Python 引擎），统计引擎与数据层在两端共用同一套实现。
+一套完全本地运行的双色球历史数据统计与回测验证工具。包含 Windows 桌面版（Python + PySide6）与 Android 版（Java + Chaquopy 内嵌 Python 引擎），统计引擎与数据层在两端共用同一套实现。
 
 > **客观结论（请先读）**：双色球每期开奖为独立随机事件，任何统计方法都无法评估下一期号码。本项目是历史数据统计与概率学习的参考工具，**不能预测开奖、不构成任何投注建议、不涉及售彩与代购**。请理性购彩，量力而行；未成年人禁止购彩。
 
@@ -50,7 +54,7 @@ pip install -r requirements.txt        # PySide6、pyinstaller（打包用）
 python app/main.py
 
 # 打包为独立 EXE（PyInstaller）
-pyinstaller 双色球智能选号.spec        # 参考根目录 build/ 下的打包配置
+pyinstaller app/main.py --name 双色球历史统计工具 --windowed   # 参考原工程 build/ 下的打包配置
 ```
 
 桌面版完全本地运行，首次启动使用内置 `data/ssq.db`，支持在界面中联网同步或导入补充数据。

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-双色球智能选号系统 —— 历史数据拉取
+双色球历史统计工具 —— 历史数据拉取
 从中国福利彩票官网公开开奖数据接口拉取全部历史开奖记录。
 接口：https://www.cwl.gov.cn/cwl_admin/front/cwlkj/search/kjxx/findDrawNotice
 """

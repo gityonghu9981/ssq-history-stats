@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-双色球智能选号系统 —— 桌面界面（PySide6）
+双色球历史统计工具 —— 桌面界面（PySide6）
 标签页：选号 / 历史数据 / 统计参考 / 回测 / 数据管理
 """
 import os
@@ -25,7 +25,7 @@ from engine import SelectionEngine, RANDOM_BASE_RED, RANDOM_BASE_BLUE
 from backtest import Backtest
 from data_fetch import fetch_all, fetch_page
 
-APP_TITLE = "双色球智能选号系统 V1.4.0"
+APP_TITLE = "双色球历史统计工具 V1.4.0"
 APP_VERSION = "1.4.0"
 APP_BUILD = "2026-10-09"
 RED_HEX = "#e13c3c"

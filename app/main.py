@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""双色球智能选号系统 —— 程序入口
+"""双色球历史统计工具 —— 程序入口
 无参数：启动桌面界面。
 --bt-block start end window sample db_path out_json：子进程回测块执行（分块回测用）。
 """
