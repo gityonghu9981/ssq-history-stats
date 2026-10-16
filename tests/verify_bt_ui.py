@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""预测率页随机基准对照功能验证：真实小回测 + 离屏 UI。"""
+"""回测页随机基准对照功能验证：真实小回测 + 离屏 UI。"""
 import os
 import sys
 import shutil
@@ -55,4 +55,4 @@ print(f"\n概况: {page.lbl_result.text().splitlines()[0]}")
 
 db.close()
 os.remove(tmp)
-print("\n预测率页随机基准对照功能验证通过 ✅")
+print("\n回测页随机基准对照功能验证通过 ✅")

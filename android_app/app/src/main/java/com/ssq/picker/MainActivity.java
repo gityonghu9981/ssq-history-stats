@@ -788,7 +788,7 @@ public class MainActivity extends Activity {
 
         root.addView(label("客观结论"));
         root.addView(hint("双色球历史统计工具不能预测开奖。双色球每期开奖为独立随机事件，"
-                + "任何统计方法都无法预测下一期号码。本程序的选号与回测仅用于"
+                + "任何统计方法都无法评估下一期号码。本程序的选号与回测仅用于"
                 + "观察历史数据规律、学习概率统计，请理性看待，切勿当作投注依据。"));
 
         root.addView(label("免责声明（非投注建议）"));

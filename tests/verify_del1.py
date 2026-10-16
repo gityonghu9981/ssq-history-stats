@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""严格验证：真实删除 1 条数据库记录，预测结果必须合理变化。"""
+"""严格验证：真实删除 1 条数据库记录，选号结果必须合理变化。"""
 import os
 import shutil
 import sys
@@ -48,8 +48,8 @@ show("删除前（基线）", s0, p0)
 show("删除后（真实写入数据库）", s1, p1)
 changed = diff_detail(s0, s1)
 print(f"\n变化组数: {len(changed)}/6 → {changed}")
-assert changed, "✗ 删除1条后预测结果未变化！"
-print("✅ 场景1通过：删除最新1条，预测结果合理变化")
+assert changed, "✗ 删除1条后选号结果未变化！"
+print("✅ 场景1通过：删除最新1条，选号结果合理变化")
 db.close()
 os.remove(tmp)
 
@@ -67,9 +67,9 @@ print(f"\n库内期数: 3510 → {db2.count()}, 删除: {mid}（窗口内中间�
 s2, p2 = state(db2)
 changed2 = diff_detail(s0b, s2)
 print(f"变化组数: {len(changed2)}/6 → {changed2}")
-assert changed2, "✗ 删除窗口内中间1条后预测结果未变化！"
-print("✅ 场景2通过：删除窗口内中间1条，预测结果合理变化")
+assert changed2, "✗ 删除窗口内中间1条后选号结果未变化！"
+print("✅ 场景2通过：删除窗口内中间1条，选号结果合理变化")
 db2.close()
 os.remove(tmp2)
 
-print("\n验证总结：真实删除 1 条数据库记录（无论最新期还是窗口内中间期），6 组预测结果均合理变化 ✅")
+print("\n验证总结：真实删除 1 条数据库记录（无论最新期还是窗口内中间期），6 组选号结果均合理变化 ✅")

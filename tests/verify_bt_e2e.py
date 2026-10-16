@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""V1.1.0 预测率回测端到端验证：真实分块子进程调度 + 新对照表显示。
+"""V1.1.0 回测端到端验证：真实分块子进程调度 + 新对照表显示。
 窗口100 / 回测200期（2块×100期子进程）。"""
 import os
 import sys
@@ -80,4 +80,4 @@ assert page.lbl_conclusion.text().startswith("结论："), "结论缺失"
 
 db.close()
 os.remove(tmp)
-print("\nV1.1.0 预测率回测端到端验证通过 ✅")
+print("\nV1.1.0 回测端到端验证通过 ✅")

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 双色球智能选号系统 —— 桌面界面（PySide6）
-标签页：选号 / 历史数据 / 统计参考 / 预测率 / 数据管理
+标签页：选号 / 历史数据 / 统计参考 / 回测 / 数据管理
 """
 import os
 import sys
@@ -201,7 +201,7 @@ class FetchWorker(QObject):
 
 
 # ============================================================
-# 预测率图表（自绘）
+# 回测图表（自绘）
 # ============================================================
 
 class HitChart(QWidget):
@@ -620,7 +620,7 @@ class StatsPage(QWidget):
 
 
 # ============================================================
-# 预测率页
+# 回测页
 # ============================================================
 
 class BacktestPage(QWidget):
@@ -710,7 +710,7 @@ class BacktestPage(QWidget):
         self.btn_run.setEnabled(False)
         self.progress.setVisible(True)
         self.progress.setValue(0)
-        self.lbl_result.setText("回测进行中…（逐期用历史建模预测下一期并比对开奖）")
+        self.lbl_result.setText("回测进行中…（逐期用历史统计建模对下一期评分并比对开奖）")
 
         self.worker_thread = QThread(self)
         self.worker = BacktestWorker(
@@ -1020,7 +1020,7 @@ class MainWindow(QMainWindow):
         tabs.addTab(self.pick_page, "智能选号")
         tabs.addTab(self.history_page, "历史数据")
         tabs.addTab(self.stats_page, "统计参考")
-        tabs.addTab(self.backtest_page, "预测率回测")
+        tabs.addTab(self.backtest_page, "回测")
         tabs.addTab(self.data_page, "数据管理")
         self.setCentralWidget(tabs)
 
