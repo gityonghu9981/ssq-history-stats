@@ -1,0 +1,41 @@
+# 虚拟环境与构建产物
+venv/
+build/
+dist/
+*.exe
+*.apk
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# Gradle
+.gradle/
+android_app/.gradle/
+android_app/app/build/
+android_app/build/
+local.properties
+
+# 本地数据与日志
+data/*.db-wal
+data/*.db-shm
+*.log
+E:/Temp/
+
+# 私密/授权相关（开源版不应包含）
+signing/
+tools/
+actgen_app/
+*.keystore
+*.jks
+*.pem
+activate_log.json
+
+# 编辑器
+.idea/
+.vscode/
+
+# 系统
+Thumbs.db
+.DS_Store

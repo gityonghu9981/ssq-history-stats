@@ -1,0 +1,36 @@
+plugins {
+    id 'com.android.application'
+    id 'com.chaquo.python'
+}
+
+android {
+    namespace 'com.ssq.picker'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.ssq.picker"
+        minSdk 24
+        targetSdk 36
+        versionCode 18
+        versionName "2.7"
+        ndk {
+            abiFilters "arm64-v8a", "x86_64"
+        }
+        python {
+            version "3.11"
+        }
+    }
+
+    // 开源版不包含私有签名配置：正式发布版由作者使用独立密钥签名，
+    // 源码使用者可自行生成 debug 构建，或配置自己的 release 签名。
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
